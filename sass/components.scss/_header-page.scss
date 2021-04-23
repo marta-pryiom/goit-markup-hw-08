@@ -1,0 +1,105 @@
+.header {
+  background-color: $additional-text-color;
+  border-bottom: 1px solid #ececec;
+  &__section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+.nav {
+  &__logo {
+    display: inline-flex;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+  }
+  &__logo-title {
+    color: $accent-color;
+  }
+  &__set {
+    display: inline-flex;
+    margin-left: 93px;
+  }
+  &__item + &__item {
+    margin-left: 50px;
+  }
+  &__set a {
+    @include transition(color);
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  &__set a:hover,
+  &__set a:focus {
+    color: $accent-color;
+  }
+  &__set .current {
+    color: $accent-color;
+  }
+  &__set .current {
+    position: relative;
+  }
+  & .current::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+}
+
+.auth {
+  display: flex;
+  margin-left: auto;
+  font-family: var(--main-font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+
+  &__link {
+    @include transition(color);
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    fill: #757575;
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $accent-color;
+  }
+
+  &__icon {
+    @include transition(color);
+    margin-right: 10px;
+  }
+  &__nav-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}

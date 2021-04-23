@@ -1,0 +1,16 @@
+@import "./utils/variables";
+@import "./base/normalize";
+@import "./utils/global-style";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./utils/visually-hidden";
+@import "./components.scss/header-page";
+@import "./components.scss/hero-page";
+@import "./components.scss/benefits-page";
+@import "./components.scss/work-page";
+@import "./components.scss/teammembers-page";
+@import "./components.scss/clients-page";
+@import "./components.scss/footer-page";
+@import "./components.scss/modal-page";
+@import "./components.scss/portfolio-buttons-page";
+@import "./components.scss/portfolio-menu";

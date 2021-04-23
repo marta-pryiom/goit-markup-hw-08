@@ -1,0 +1,113 @@
+.footer {
+  padding: 60px 0;
+  background-color: #2f303a;
+  margin: 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__widget {
+    flex-basis: calc((50%-45px) / 2);
+  }
+  &__widget:last-child {
+    flex-basis: calc(50%-15px);
+  }
+
+  &__widget .nav__logo {
+    margin-bottom: 20px;
+  }
+}
+.footer-nav {
+  &__item {
+    color: $additional-text-color;
+  }
+  &__address-text {
+    font-family: $main-font-family;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $additional-text-color;
+  }
+  &__link {
+    font-family: $main-font-family;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $additional-text-color;
+  }
+  &__list .mail__item {
+    margin-bottom: 9px;
+  }
+  &__list {
+    display: block;
+    text-align: left;
+    margin: 9px 0 0 0;
+    padding: 0;
+  }
+
+  &__list a {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .mail {
+    margin-bottom: 9px;
+  }
+}
+
+.social,
+.footer-form {
+  padding-top: 12px;
+}
+.title-icons {
+  @extend .title;
+}
+
+.social-icons {
+  &__link {
+    @include transition(background-color);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &__link:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.social-icons__svg--footer {
+  fill: #fff;
+}
+.title-form {
+  @extend .title;
+}
+.footer-form {
+  &__field {
+    display: flex;
+  }
+
+  &__mail {
+    @include bordered(rgba(255, 255, 255, 0.3));
+    max-width: 358px;
+    padding: 15px 295px 15px 16px;
+    border-radius: 4px;
+    background-color: transparent;
+    margin-right: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__svg {
+    margin-left: 10px;
+  }
+}
+.button-active--footer {
+  @extend %button-active;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 50px;
+
+  &:hover {
+    background-color: #188ce8;
+  }
+}
