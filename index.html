@@ -17,37 +17,53 @@
             
         <header class="header">
             <div class="header__section container">
-                <nav class="nav">
-                    <a href="" class="nav__logo"> <span class="nav__logo-title">Web</span>Studio</a>
-                    <ul class="nav__set">
-                        <li class="nav__item"> <a href="index.html" class=" current">Студия</a></li>
-                        <li class="nav__item"> <a href="portfolio.html" >Портфолио</a></li>
-                        <li class="nav__item"> <a href="" >Контакты</a></li>
+                <a href="" class="header__logo"> <span class="header__logo-title">Web</span>Studio</a>
+                <div class="header__box" data-menu >
+                    <nav class="nav">
+                        <ul class="nav__set">
+                            <li class="nav__item"> <a href="index.html" class=" current">Студия</a></li>
+                            <li class="nav__item"> <a href="portfolio.html">Портфолио</a></li>
+                            <li class="nav__item"> <a href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="auth">
+                        <li class="auth__item">
+                            <a class="auth__link" href="mailto:info@devstudio.com">
+                                <div class="auth__nav-icon">
+                                    <svg class="auth__icon" width="16px" height="12px">
+                                        <use href="./image/sprite.svg#icon-envelope"></use>
+                                    </svg>
+                                    info@devstudio.com
+                                </div>
+                            </a>
+                    
+                        </li>
+                        <li class="auth__item">
+                            <a class="auth__link" href="tel:+380961111111">
+                                <div class="auth__nav-icon">
+                                    <svg class="auth__icon" width="10px" height="16px">
+                                        <use href="./image/sprite.svg#icon-smartphone"></use>
+                                    </svg>
+                                    +38 096 111 11 11
+                                </div>
+                            </a>
+                        </li>
                     </ul>
-                </nav>
-                <ul class="auth">
-                    <li class="auth__item">
-                         <a class="auth__link" href="mailto:info@devstudio.com">
-                            <div class="auth__nav-icon">
-                                <svg class="auth__icon" width="16px" height="12px">
-                                    <use href="./image/sprite.svg#icon-envelope"></use>
-                                </svg>
-                                info@devstudio.com
-                            </div>
-                        </a>
+                </div>
+                <button class="menu-button is-open" 
+                type="button" 
+                aria-expanded="false"
+                data-menu-button>
+                    <svg  
+                    width="19px" 
+                    height="19px" 
+                    aria-label="переключатель мобильного меню">
+                        <use class="menu-button__close" href="./image/sprite.svg#icon-close"></use>
+                        <use class="menu-button__menu" href="./image/sprite.svg#icon-menu"></use>
                    
-                    </li>
-                    <li class="auth__item"> 
-                        <a class="auth__link" href="tel:+380961111111">
-                            <div class="auth__nav-icon">
-                                <svg class="auth__icon" width="10px" height="16px">
-                                    <use href="./image/sprite.svg#icon-smartphone"></use>
-                                </svg>
-                                +38 096 111 11 11
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                    </svg>
+                    
+                </button>
             </div> 
         </header>
         
@@ -507,6 +523,7 @@
         
             </div>
         </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
