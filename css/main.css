@@ -433,6 +433,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .header__box {
+    width: 100%;
     position: relative;
     display: none;
     background-color: #fff;
@@ -549,7 +550,7 @@ body {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 787px) {
   .auth {
     display: flex;
     flex-wrap: wrap;

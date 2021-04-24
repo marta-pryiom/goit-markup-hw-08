@@ -36,6 +36,7 @@
   }
   &__box {
     @media screen and(max-width:$tablet) {
+      width: 100%;
       position: relative;
       display: none;
       background-color: #fff;
@@ -135,7 +136,7 @@
     margin-left: 84px;
   }
 
-  @media screen and(min-width:$mobile) and (max-width: $tablet) {
+  @media screen and (max-width: 787px) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
