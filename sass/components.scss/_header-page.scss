@@ -1,5 +1,5 @@
 .header {
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: 767px) {
     max-width: 480px;
     position: relative;
   }
@@ -7,20 +7,19 @@
   border-bottom: 1px solid #ececec;
 
   &__section {
-    @media screen and (max-width: $desktop) {
-      display: flex;
-      align-items: center;
-      margin: 0;
-    }
+    display: flex;
+    align-items: center;
+    margin: 0;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: 767px) {
       padding-top: 15px;
+      padding-left: 15px;
       padding-bottom: 15px;
       justify-content: space-between;
     }
-    @media screen and (min-width: $tablet) {
-      padding: 21px 15px;
-    }
+    // @media screen and (min-width: $tablet) {
+    //   padding: 21px 15px;
+    // }
   }
   &__logo {
     display: inline-flex;
@@ -35,7 +34,7 @@
     color: $accent-color;
   }
   &__box {
-    @media screen and(max-width:$tablet) {
+    @media screen and(max-width:767px) {
       width: 100%;
       position: relative;
       display: none;
@@ -51,7 +50,6 @@
     }
     @media screen and (min-width: $tablet) {
       display: flex;
-      background-color: rgb(241, 146, 146);
       align-items: center;
       justify-content: space-between;
     }
@@ -62,20 +60,21 @@
   @media screen and(min-width:$tablet) {
     @include transition(color);
     display: flex;
+    margin-right: 84px;
   }
   &__set {
-    @media screen and(max-width:$tablet) {
+    @media screen and(max-width:767px) {
       display: block;
       margin-bottom: 302px;
     }
     @media screen and(min-width:$tablet) {
       display: inline-flex;
-      margin-left: 93px;
+      margin-left: 88px;
     }
   }
 
   &__set a {
-    @media screen and(max-width:$tablet) {
+    @media screen and(max-width:767px) {
       font-size: 40px;
       line-height: 1.17;
       letter-spacing: 0.02em;
@@ -92,7 +91,7 @@
   }
 
   &__item:not(:last-child) {
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 32px;
     }
     @media screen and(min-width:$tablet) {
@@ -133,10 +132,43 @@
 
 .auth {
   @media screen and (min-width: $tablet) {
-    margin-left: 84px;
+    display: flex;
+
+    flex-wrap: wrap;
+
+    font-family: var(--main-font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+  }
+  &__item + &__item {
+    @media screen and (min-width: $tablet) {
+      margin-top: 10px;
+    }
+  }
+  .auth__item {
+    display: flex;
+    align-items: center;
   }
 
-  @media screen and (max-width: 787px) {
+  &__icon--envelope {
+    @media screen and (min-width: $tablet) {
+      width: 14px;
+      height: 10px;
+      margin-right: 8px;
+    }
+  }
+  &__icon--smartphone {
+    @media screen and (min-width: $tablet) {
+      width: 10px;
+      height: 14px;
+      margin-right: 8px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
@@ -147,7 +179,7 @@
   }
 
   &__item:not(:last-child) {
-    @media screen and(max-width:$tablet) {
+    @media screen and(max-width:767px) {
       color: $primary-text-color;
       font-size: 24px;
       line-height: 1.16;
@@ -167,13 +199,15 @@
     }
   }
 }
-.auth__icon {
-  @media screen and(max-width:$tablet) {
+.auth__icon--smartphone,
+.auth__icon--envelope {
+  @media screen and(max-width:767px) {
     display: none;
   }
 }
+
 .social-list {
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 767px) {
     display: flex;
     align-items: center;
     justify-content: center;
