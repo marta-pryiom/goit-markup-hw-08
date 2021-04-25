@@ -401,6 +401,26 @@ body {
   margin: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .header__section {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__section {
+    padding-bottom: 21px;
+    padding-top: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__section {
+    padding-bottom: 24px;
+    padding-top: 24px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header__section {
     padding-top: 15px;
@@ -529,7 +549,7 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    bottom: -3px;
+    bottom: 0;
     width: 100%;
     height: 4px;
     background-color: #2196f3;
@@ -550,7 +570,18 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .auth__link {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    fill: #757575;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .auth__item + .auth__item {
     margin-top: 10px;
   }
@@ -601,6 +632,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .auth__nav-icon {
+    display: inline-flex;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -611,10 +643,47 @@ body {
   }
 }
 
+.auth__nav-icon:hover, .auth__nav-icon:focus {
+  color: #2196f3;
+}
+
 @media screen and (max-width: 767px) {
-  .auth__icon--smartphone,
-  .auth__icon--envelope {
+  .auth .auth__icon--smartphone,
+  .auth .auth__icon--envelope {
     display: none;
+  }
+}
+
+.auth__link:hover .auth__icon--envelope,
+.auth__link:focus .auth__icon--envelope {
+  fill: #2196f3;
+}
+
+.auth__link:hover .auth__icon--smartphone,
+.auth__link:focus .auth__icon--smartphone {
+  fill: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .auth__icon {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth__nav-icon {
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth__item + .auth__item {
+    margin-left: 30px;
   }
 }
 
