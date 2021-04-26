@@ -1,6 +1,6 @@
 .header {
   @media screen and (max-width: 767px) {
-    max-width: 480px;
+    width: 480px;
     position: relative;
   }
   background-color: $additional-text-color;
@@ -83,6 +83,7 @@
 
   &__set a {
     @media screen and(max-width:767px) {
+      font-size: 500px;
       font-size: 40px;
       line-height: 1.17;
       letter-spacing: 0.02em;
@@ -163,7 +164,7 @@
       margin-top: 10px;
     }
   }
-  .auth__item {
+  &__item {
     display: flex;
     align-items: center;
   }

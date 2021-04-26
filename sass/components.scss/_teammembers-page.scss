@@ -8,12 +8,18 @@
 .teammembers {
   background-color: #f5f4fa;
   text-align: center;
-  padding: 94px 0;
+  padding: 60px 0;
   margin-bottom: 0;
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    margin: -15px;
   }
 
   &__item {
@@ -21,12 +27,22 @@
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 8 * 15px) / 4);
+    }
   }
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item + &__item {
+    @media screen and(max-width:767px) {
+      margin-top: 30px;
+    }
   }
+
   &__item p {
-    max-width: 270px;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;

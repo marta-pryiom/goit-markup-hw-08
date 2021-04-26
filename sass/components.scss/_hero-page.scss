@@ -12,26 +12,40 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: #c4c4c4;
+  @media screen and (max-width: 1199px) {
+    height: 400px;
+  }
 }
 .hero {
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: #2f303a;
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   &__title {
     color: $additional-text-color;
     font-family: $main-font-family;
     text-align: center;
+    // align-items: center;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 30px;
     max-width: 696px;
     margin: 0 auto;
     margin-bottom: 30px;
+    @media screen and (max-width: 1199px) {
+      font-size: 26px;
+      line-height: 1.62;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
 
