@@ -89,3 +89,8 @@
     margin-left: 10px;
   }
 }
+.teammembers__item img {
+  @media screen and (max-width: 767px) {
+    width: 450px;
+  }
+}

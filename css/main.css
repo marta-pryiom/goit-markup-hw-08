@@ -493,7 +493,6 @@ body {
 @media screen and (max-width: 767px) {
   .header__box {
     width: 100%;
-    position: relative;
     display: none;
     background-color: #fff;
     position: absolute;
@@ -1220,6 +1219,12 @@ body {
 
 .social-icons__item + .social-icons__item {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .teammembers__item img {
+    width: 450px;
+  }
 }
 
 .clients {
