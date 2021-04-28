@@ -3,7 +3,7 @@
   margin-right: auto;
   @media screen and (max-width: 767px) {
     width: 480px;
-    position: relative;
+    // position: relative;
   }
   background-color: $additional-text-color;
   border-bottom: 1px solid #ececec;
@@ -13,10 +13,6 @@
     margin-right: auto;
     display: flex;
     align-items: center;
-
-    @media screen and (min-width: $desktop) {
-      justify-content: center;
-    }
     @media screen and (min-width: $tablet) {
       padding-bottom: 21px;
       padding-top: 21px;
@@ -46,8 +42,10 @@
     color: $accent-color;
   }
   &__box {
+    width: 100vw;
+
     @media screen and(max-width:767px) {
-      width: 100%;
+      // width: 100%;
       display: none;
       background-color: #fff;
       position: absolute;

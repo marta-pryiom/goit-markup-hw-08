@@ -121,6 +121,9 @@
     margin-top: 60px;
     margin-bottom: 60px;
   }
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 .social .title-icons {
   margin: 0 0 20px 0;

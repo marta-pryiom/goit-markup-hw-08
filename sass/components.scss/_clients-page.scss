@@ -6,6 +6,7 @@
   }
 
   &__list {
+    width: 100%;
     display: inline-flex;
     flex-wrap: wrap;
     margin: -15px;
@@ -37,11 +38,12 @@
   }
 
   &__link {
+    width: 100%;
     @include centeredFlex(flex);
     @include transition(color);
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    width: 170px;
+
     height: 90px;
   }
   &__link:hover &__svg,
