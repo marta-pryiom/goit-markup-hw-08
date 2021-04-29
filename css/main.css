@@ -497,7 +497,16 @@ body {
     height: 100vh;
   }
   .header__box.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -533,7 +542,6 @@ body {
 @media screen and (max-width: 767px) {
   .nav__set {
     display: block;
-    margin-bottom: 302px;
   }
 }
 
@@ -858,6 +866,19 @@ body {
   .menu-button {
     display: none;
   }
+}
+
+.auth-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .overlay {
@@ -1896,7 +1917,13 @@ body {
 
 .portfolio-section {
   background-color: #fff;
-  padding: 94px 0;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding: 94px 0;
+  }
 }
 
 .filters-list {
@@ -1916,6 +1943,13 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters-list {
+    margin-bottom: 50px;
   }
 }
 
@@ -1973,7 +2007,12 @@ h1 {
 .menu {
   margin-left: -30px;
   margin-top: -30px;
-  margin-top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {

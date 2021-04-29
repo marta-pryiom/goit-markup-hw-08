@@ -1,15 +1,24 @@
 .portfolio-section {
   background-color: $primary-bg-color;
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
 }
 .filters-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  // margin: 0 0 50px 0;
   padding: 0;
+  // @media screen and (max-width: 767px) {
+  //   margin-bottom: 40px;
+  // }
   @media screen and (min-width: $tablet) {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
   }
 
   &__button {
