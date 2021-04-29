@@ -45,14 +45,14 @@
     width: 100vw;
 
     @media screen and(max-width:767px) {
-      // width: 100%;
+      z-index: 5;
       display: none;
       background-color: #fff;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       padding: 48px 40px;
-      // height: 100vh;
+      height: 100vh;
 
       &.is-open {
         display: block;
@@ -84,20 +84,18 @@
   }
 
   &__set a {
+    font-weight: 500;
+    color: $title-text-color;
     @media screen and(max-width:767px) {
-      font-size: 500px;
       font-size: 40px;
       line-height: 1.17;
       letter-spacing: 0.02em;
-      color: $title-text-color;
     }
     @media screen and(min-width:$tablet) {
       font-size: 14px;
-      font-weight: 500;
       line-height: 1.14;
       padding-top: 32px;
       padding-bottom: 32px;
-      color: $title-text-color;
     }
   }
 
@@ -142,11 +140,11 @@
 }
 
 .auth {
+  font-weight: 500;
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     font-family: var(--main-font-family);
-    font-weight: 500;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.02em;
@@ -287,6 +285,7 @@
   }
 }
 .menu-button {
+  z-index: 10;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -314,9 +313,9 @@
   &.is-open &__menu {
     display: none;
   }
-  &.__close {
-    z-index: 100;
-  }
+  // &.__close {
+  //   z-index: 100;
+  // }
   &:hover &__close,
   &:focus &__menu {
     fill: $accent-color;

@@ -487,12 +487,14 @@ body {
 
 @media screen and (max-width: 767px) {
   .header__box {
+    z-index: 5;
     display: none;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 48px 40px;
+    height: 100vh;
   }
   .header__box.is-open {
     display: block;
@@ -544,24 +546,25 @@ body {
   }
 }
 
+.nav__set a {
+  font-weight: 500;
+  color: #212121;
+}
+
 @media screen and (max-width: 767px) {
   .nav__set a {
-    font-size: 500px;
     font-size: 40px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: #212121;
   }
 }
 
 @media screen and (min-width: 768px) {
   .nav__set a {
     font-size: 14px;
-    font-weight: 500;
     line-height: 1.14;
     padding-top: 32px;
     padding-bottom: 32px;
-    color: #212121;
   }
 }
 
@@ -610,6 +613,10 @@ body {
   }
 }
 
+.auth {
+  font-weight: 500;
+}
+
 @media screen and (min-width: 768px) {
   .auth {
     display: -webkit-box;
@@ -618,7 +625,6 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     font-family: var(--main-font-family);
-    font-weight: 500;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.02em;
@@ -806,6 +812,7 @@ body {
 }
 
 .menu-button {
+  z-index: 10;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -840,10 +847,6 @@ body {
 
 .menu-button.is-open .menu-button__menu {
   display: none;
-}
-
-.menu-button.__close {
-  z-index: 100;
 }
 
 .menu-button:hover .menu-button__close,
