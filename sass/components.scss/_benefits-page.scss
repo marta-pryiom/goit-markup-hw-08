@@ -12,15 +12,12 @@
     height: 120px;
     background-color: #f5f4fa;
     border-radius: 4px;
-    // @media screen and (min-width: $tablet) {
-    //   width: 354px;
-    // }
-    // @media screen and (min-width: $desktop) {
-    //   width: 270px;
-    // }
   }
   &__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     min-width: 270px;
     margin-bottom: 94px;
@@ -38,11 +35,13 @@
   }
   &__item {
     @media screen and (min-width: $tablet) {
+      -ms-flex-preferred-size: calc((100% - 4 * 15px) / 2);
       flex-basis: calc((100% - 4 * 15px) / 2);
       margin: 15px;
     }
 
     @media screen and (min-width: $desktop) {
+      -ms-flex-preferred-size: calc((100% - 8 * 15px) / 4);
       flex-basis: calc((100% - 8 * 15px) / 4);
     }
   }

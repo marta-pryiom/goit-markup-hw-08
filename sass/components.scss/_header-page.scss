@@ -3,7 +3,6 @@
   margin-right: auto;
   @media screen and (max-width: 767px) {
     width: 480px;
-    // position: relative;
   }
   background-color: $additional-text-color;
   border-bottom: 1px solid #ececec;
@@ -11,8 +10,12 @@
   &__section {
     margin-left: auto;
     margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     @media screen and (min-width: $tablet) {
       padding-bottom: 21px;
       padding-top: 21px;
@@ -26,10 +29,14 @@
       padding-top: 15px;
       padding-left: 15px;
       padding-bottom: 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
     }
   }
   &__logo {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -55,15 +62,28 @@
       height: 100vh;
 
       &.is-open {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
       }
     }
     @media screen and (min-width: $tablet) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
     }
   }
 }
@@ -71,15 +91,18 @@
 .nav {
   @media screen and(min-width:$tablet) {
     @include transition(color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: 84px;
   }
   &__set {
     @media screen and(max-width:767px) {
       display: block;
-      // margin-bottom: 302px;
     }
     @media screen and(min-width:$tablet) {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       margin-left: 88px;
     }
@@ -144,8 +167,11 @@
 .auth {
   font-weight: 500;
   @media screen and (min-width: $tablet) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     font-family: var(--main-font-family);
     font-size: 12px;
     line-height: 1.16;
@@ -155,8 +181,12 @@
   &__link {
     @media screen and (min-width: $desktop) {
       @include transition(color);
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       fill: #757575;
     }
   }
@@ -167,8 +197,12 @@
     }
   }
   &__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   &__icon--envelope {
@@ -187,9 +221,15 @@
   }
 
   @media screen and (max-width: 767px) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     font-size: 34px;
     line-height: 1.17;
     letter-spacing: 0.02em;
@@ -207,6 +247,8 @@
   }
   &__nav-icon {
     @media screen and (min-width: $tablet) {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       font-family: Roboto;
       font-style: normal;
@@ -222,10 +264,6 @@
     color: $accent-color;
   }
 
-  //   .auth__nav-icon:hover,
-  // .auth__nav-icon:focus {
-  //   color: $accent-color;
-  // }
   .auth__icon--smartphone,
   .auth__icon--envelope {
     @media screen and(max-width:767px) {
@@ -250,8 +288,12 @@
   &__nav-icon {
     @media screen and (min-width: $desktop) {
       font-size: 14px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
   }
   &__item + &__item {
@@ -263,9 +305,15 @@
 
 .social-list {
   @media screen and (max-width: 767px) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 64px;
     font-weight: 500;
     font-size: 18px;
@@ -277,7 +325,9 @@
       width: 22px;
       height: 0px;
       border: 1px solid rgba(33, 33, 33, 0.2);
-      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
       margin-left: 10px;
       margin-right: 10px;
     }
@@ -293,9 +343,15 @@
   right: 15px;
   width: 40px;
   height: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
   border: none;
@@ -315,9 +371,6 @@
   &.is-open &__menu {
     display: none;
   }
-  // &.__close {
-  //   z-index: 100;
-  // }
   &:hover &__close,
   &:focus &__menu {
     fill: $accent-color;
@@ -327,7 +380,14 @@
   }
 }
 .auth-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }

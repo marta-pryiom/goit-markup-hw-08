@@ -5,13 +5,22 @@
 
   &__container {
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
     }
     @media screen and (min-width: $desktop) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
     }
   }
 }
@@ -20,14 +29,17 @@
     text-align: center;
   }
   @media screen and (min-width: $tablet) {
-    flex-basis: calc(100% / 2);
+    -ms-flex-preferred-size: calc(100% / 2);
+        flex-basis: calc(100% / 2);
     text-align: center;
   }
   @media screen and (min-width: $desktop) {
-    flex-basis: calc((50% - 45px) / 2);
+    -ms-flex-preferred-size: calc((50% - 45px) / 2);
+        flex-basis: calc((50% - 45px) / 2);
   }
   &__widget:last-child {
-    flex-basis: calc(50% - 15px);
+    -ms-flex-preferred-size: calc(50% - 15px);
+        flex-basis: calc(50% - 15px);
   }
 }
 .footer-nav {
@@ -87,6 +99,8 @@
 }
 
 .footer-logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -154,6 +168,8 @@
     }
 
     @media screen and (min-width: $desktop) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
   }
@@ -163,7 +179,6 @@
     padding-bottom: 15px;
     padding-top: 15px;
     padding-left: 16px;
-    // padding: 15px 295px 15px 16px;
     border-radius: 4px;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.6);
@@ -183,9 +198,15 @@
 }
 .button-active--footer {
   @extend %button-active;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-width: 200px;
   min-height: 50px;
 
