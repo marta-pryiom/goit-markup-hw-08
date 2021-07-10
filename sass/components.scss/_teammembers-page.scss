@@ -21,10 +21,10 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: -15px;
   }
 
   &__item {
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     background-color: $additional-text-color;
@@ -99,8 +99,8 @@
     margin-left: 10px;
   }
 }
-.teammembers__item img {
-  @media screen and (max-width: 767px) {
-    width: 450px;
-  }
-}
+// .teammembers__item img {
+//   @media screen and (max-width: 767px) {
+//     width: 450px;
+//   }
+// }
